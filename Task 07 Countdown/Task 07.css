@@ -1,0 +1,119 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background:#f43f08
+    font-family 'Arial', sans-serif;
+}
+
+.container {
+    text-align: center;
+    background-color: rgb(13, 233, 241);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+    width: 400px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    color: #333;
+    animation: colorChange 2s infinite alternate;
+}
+
+.countdown {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.time {
+    font-size: 20px;
+    color: #444;
+    transition: transform 0.3s ease-in-out;
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.time:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #00d4ff, #007bff);
+}
+
+.time span {
+    display: block;
+    font-size: 36px;
+    color: white;
+    animation: pulse 1s infinite alternate;
+}
+
+#set-target {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#set-target:hover {
+    background-color: #f43f08;
+    transform: scale(1.05);
+}
+
+input[type="datetime-local"] {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: border-color 0.2s;
+    width: calc(100% - 22px);
+}
+
+input[type="datetime-local"]:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes colorChange {
+    from {
+        color: #007bff;
+    }
+    to {
+        color: #e7971f;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
